@@ -35,15 +35,20 @@ function App() {
       <h1
         style={{
           color: "white",
-          backgroundColor: "black "
-,          boxShadow:
-            "0 4px 8px 0 rgb(229,229,229), 0 6px 20px 0 rgb(229,229,229)",
+          backgroundColor: "black ",
+     
           margin: "13px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           height: "60px",
-          borderRadius: "15px",
+          borderRadius: "12px",
+          boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.1)',
+          transition: 'all 0.3s ease 0s',
+          
+          letterSpacing: '2.5px',
+          fontWeight: '500',
+          
         }}
       >
         To-Do List{" "}
