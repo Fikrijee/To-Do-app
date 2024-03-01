@@ -125,7 +125,7 @@ function TodoList({ todos, toggleTodo, deleteTodo, editTodo }) {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table><br />
 
       <div style={{ marginTop: "20px", display: "flex", alignItems: "center" }}>
         <strong style={{ marginRight: "10px" }}>Percentage of Completed Tasks:</strong>
