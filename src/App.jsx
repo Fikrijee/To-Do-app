@@ -37,11 +37,11 @@ function App() {
           color: "white",
           backgroundColor: "black ",
      
-          margin: "13px",
+          margin: "10px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          height: "60px",
+          height: "65px",
           borderRadius: "12px",
           boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.1)',
           transition: 'all 0.3s ease 0s',
@@ -53,9 +53,8 @@ function App() {
       >
         To-Do List{" "}
         <strong style={{ padding: "15px" }}>
-          {" "}
-          <ChecklistRtlTwoToneIcon />{" "}
-        </strong>
+  <ChecklistRtlTwoToneIcon style={{ fontSize: "45px" }} />
+</strong>
       </h1>
       <TodoForm addTodo={addTodo} />
       <TodoList
