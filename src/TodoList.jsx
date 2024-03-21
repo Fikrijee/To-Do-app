@@ -27,6 +27,9 @@ function TodoList({ todos, toggleTodo, deleteTodo, editTodo }) {
       deleteTodo(id);
     }
   };
+  if (todos.length === 0) {
+    return <div style={{ textAlign: 'center', marginTop: '20px', fontSize: '24px', color: '#333'}}>No tasks added. Add one here.</div>;
+  }
 
   const handleSort = (type) => {
     setSortType(type);
@@ -46,7 +49,7 @@ function TodoList({ todos, toggleTodo, deleteTodo, editTodo }) {
 
   return (
     <div> 
-      <table className="table table-striped" style={{ backgroundColor: "#e6e6e6" }}>
+      <table className="table table-hover" style={{ backgroundColor: "#e6e6e6" }}>
         <thead>
           <tr>
             <th scope="col">Completed</th>
@@ -147,10 +150,10 @@ function TodoList({ todos, toggleTodo, deleteTodo, editTodo }) {
 </div>
 
       <div className="sort-buttons">
-        <button onClick={() => handleSort("name")} className="sort-button1" style={{backgroundColor: sortType === "name" ? "#97E355" : ""}}>
+        <button onClick={() => handleSort("name")} className="sort-button1" style={{backgroundColor: sortType === "name" ? "black" : "", color: sortType === "name" ? "white" : "" }}>
           <SortByAlphaSharpIcon />
         </button>
-        <button onClick={() => handleSort("completed")} className="sort-button2" style={{backgroundColor: sortType === "completed" ? "#97E355" : ""}}>
+        <button onClick={() => handleSort("completed")} className="sort-button2" style={{backgroundColor: sortType === "completed" ? "black" : "", color: sortType === "completed" ? "white" : "" }}>
           <RuleIcon />
         </button><br />
       </div>

@@ -200,9 +200,9 @@
   padding: 6px 15px;
   border: unset;
   border-radius: 15px;
-  color: #dddbdb;
+  color: black;
   z-index: 1;
-  background: black;
+  background: #f2f2f2;
   position: relative;
   font-weight: 1000;
   font-size: 13px;
@@ -216,9 +216,9 @@
   padding: 6px 15px;
   border: unset;
   border-radius: 15px;
-  color: #f2f2f2;
+  color:black ;
   z-index: 1;
-  background: black;
+  background:#f2f2f2 ;
   position: relative;
   font-weight: 1000;
   font-size: 13px;
@@ -233,5 +233,5 @@
 }
 .sort-button2:hover {
   background: #97e355;
-  box-shadow: 0px 0px 10px #97e355, 0px 0px 100px #97e355;
+  box-shadow: 0px 0px 5px #97e355, 0px 0px 100px #97e355;
 }
