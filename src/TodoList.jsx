@@ -127,27 +127,25 @@ function TodoList({ todos, toggleTodo, deleteTodo, editTodo }) {
         </tbody>
       </table><br />
 
-      <div style={{ marginTop: "20px", display: "flex", alignItems: "center" }}>
-        <strong style={{ marginRight: "10px" }}>Percentage of Completed Tasks:</strong>
-        <div className="progress" style={{ flex: 1 }}>
-          <div
-            className="progress-bar"
-            role="progressbar"
-            style={{
-              width: `${percentageCompleted}%`,
-              backgroundColor: "#636161",
-              boxShadow: "0 4px 8px 0 rgb(229,229,229), 0 6px 20px 0 rgb(229,229,229)",
-              borderRadius: "15px",
-              fontSize: "15px",
-            }}
-            aria-valuenow={percentageCompleted}
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            {Number.isNaN(percentageCompleted) ? "0%" : `${percentageCompleted.toFixed(2)}%`}
-          </div>
-        </div>
-      </div>
+      <div style={{ marginTop: "20px", display: "flex", flexDirection: "column", alignItems: "center", boxShadow: "2px 3px 25px -1px rgba(0, 0, 0, 0.27)", backgroundColor: "#f2f2f2", borderRadius: "10px", padding: "10px" }}>
+  <strong style={{ color: "#333333", fontSize: "18px", marginBottom: "10px" }}>Percentage of Completed Tasks: {Number.isNaN(percentageCompleted) ? "0%" : `${percentageCompleted.toFixed(2)}%`}</strong>
+ 
+  <div className="progress" style={{ backgroundColor: "#e6e6e6", borderRadius: "5px", height: "15px", width: "100%", margin: "0 10px" }}>
+    <div
+      className="progress-bar"
+      role="progressbar"
+      style={{
+        width: `${percentageCompleted}%`,
+        backgroundColor: "black",
+        borderRadius: "5px",
+      }}
+      aria-valuenow={percentageCompleted}
+      aria-valuemin="0"
+      aria-valuemax="100"
+    ></div>
+  </div>
+</div>
+
       <div className="sort-buttons">
         <button onClick={() => handleSort("name")} className="sort-button1" style={{backgroundColor: sortType === "name" ? "#97E355" : ""}}>
           <SortByAlphaSharpIcon />
